@@ -24,13 +24,22 @@ namespace PokerTournament
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            Person person = new Person(textBoxName.Text);
-            this.data.people.Add(person);
+            //Person person = new Person(textBoxName.Text);
+            //this.data.people.Add(person);
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             data.SaveDataInJson();
+        }
+
+        private void buttonListbox_Click(object sender, EventArgs e)
+        {
+            data.ReadDataFromXLS();
+            for (int i = 0; i < data.people.Count; i++)
+            {
+                listBoxPersons.Items.Add(data.people[i].ToString());
+            }
         }
     }
 }

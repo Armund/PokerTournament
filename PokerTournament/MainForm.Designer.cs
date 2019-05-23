@@ -78,6 +78,7 @@
             this.buttonListbox.TabIndex = 4;
             this.buttonListbox.Text = "Показать";
             this.buttonListbox.UseVisualStyleBackColor = true;
+            this.buttonListbox.Click += new System.EventHandler(this.buttonListbox_Click);
             // 
             // MainForm
             // 

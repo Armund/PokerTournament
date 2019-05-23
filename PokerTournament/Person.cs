@@ -11,10 +11,28 @@ namespace PokerTournament
         public int ID { get; set; }
         public string name { get; set; }
         public string group { get; set; }
+        public bool isStudent { get; set; }
 
-        public Person(string name_arg)
+        public Person(int id, string Name, string Group, bool IsStudent)
         {
-            name = name_arg;
+            ID = id;
+            name = Name;
+            group = Group;
+            isStudent = IsStudent;
         }
+
+        override public string ToString()
+        {
+            string student;
+            if (isStudent) // TODO: Переписать тернарным оператором
+            {
+                student = "Да";
+            } else
+            {
+                student = "Нет";
+            };
+            return $"ID: {ID}  Имя: {name}  Группа: {group} Студент: {student}";
+        }
+
     }
 }
