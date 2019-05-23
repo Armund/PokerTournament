@@ -1,0 +1,13 @@
+D:\ALEX\proging\PokerTournament\PokerTournament\bin\Debug\PokerTournament.exe.config
+D:\ALEX\proging\PokerTournament\PokerTournament\bin\Debug\PokerTournament.exe
+D:\ALEX\proging\PokerTournament\PokerTournament\bin\Debug\PokerTournament.pdb
+D:\ALEX\proging\PokerTournament\PokerTournament\obj\Debug\PokerTournament.csprojAssemblyReference.cache
+D:\ALEX\proging\PokerTournament\PokerTournament\obj\Debug\PokerTournament.MainForm.resources
+D:\ALEX\proging\PokerTournament\PokerTournament\obj\Debug\PokerTournament.Properties.Resources.resources
+D:\ALEX\proging\PokerTournament\PokerTournament\obj\Debug\PokerTournament.csproj.GenerateResource.cache
+D:\ALEX\proging\PokerTournament\PokerTournament\obj\Debug\PokerTournament.csproj.CoreCompileInputs.cache
+D:\ALEX\proging\PokerTournament\PokerTournament\obj\Debug\PokerTournament.exe
+D:\ALEX\proging\PokerTournament\PokerTournament\obj\Debug\PokerTournament.pdb
+D:\ALEX\proging\PokerTournament\PokerTournament\bin\Debug\Newtonsoft.Json.dll
+D:\ALEX\proging\PokerTournament\PokerTournament\bin\Debug\Newtonsoft.Json.xml
+D:\ALEX\proging\PokerTournament\PokerTournament\obj\Debug\PokerTournament.csproj.CopyComplete
