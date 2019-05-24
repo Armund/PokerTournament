@@ -1,6 +1,6 @@
 ﻿namespace PokerTournament
 {
-    partial class MainForm
+    partial class Settings
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -33,6 +33,7 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.listBoxPersons = new System.Windows.Forms.ListBox();
             this.buttonListbox = new System.Windows.Forms.Button();
+            this.btnClearPeople = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxName
@@ -76,23 +77,35 @@
             this.buttonListbox.Name = "buttonListbox";
             this.buttonListbox.Size = new System.Drawing.Size(75, 23);
             this.buttonListbox.TabIndex = 4;
-            this.buttonListbox.Text = "Показать";
+            this.buttonListbox.Text = "Обновить";
             this.buttonListbox.UseVisualStyleBackColor = true;
             this.buttonListbox.Click += new System.EventHandler(this.buttonListbox_Click);
             // 
-            // MainForm
+            // btnClearPeople
+            // 
+            this.btnClearPeople.Location = new System.Drawing.Point(766, 77);
+            this.btnClearPeople.Name = "btnClearPeople";
+            this.btnClearPeople.Size = new System.Drawing.Size(75, 23);
+            this.btnClearPeople.TabIndex = 5;
+            this.btnClearPeople.Text = "Очистить";
+            this.btnClearPeople.UseVisualStyleBackColor = true;
+            this.btnClearPeople.Click += new System.EventHandler(this.btnClearPeople_Click);
+            // 
+            // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1015, 655);
+            this.Controls.Add(this.btnClearPeople);
             this.Controls.Add(this.buttonListbox);
             this.Controls.Add(this.listBoxPersons);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.textBoxName);
-            this.Name = "MainForm";
+            this.Name = "Settings";
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -105,6 +118,7 @@
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.ListBox listBoxPersons;
         private System.Windows.Forms.Button buttonListbox;
+        private System.Windows.Forms.Button btnClearPeople;
     }
 }
 

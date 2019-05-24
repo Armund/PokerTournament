@@ -11,11 +11,11 @@ using Newtonsoft.Json;
 
 namespace PokerTournament
 {
-    public partial class MainForm : Form
+    public partial class Settings : Form
     {
         Data data = new Data();
 
-        public MainForm()
+        public Settings()
         {
             //Data data 
             this.data.ReadDataFromJson();
@@ -35,11 +35,23 @@ namespace PokerTournament
 
         private void buttonListbox_Click(object sender, EventArgs e)
         {
+            listBoxPersons.Items.Clear();
             data.ReadDataFromXLS();
             for (int i = 0; i < data.people.Count; i++)
             {
                 listBoxPersons.Items.Add(data.people[i].ToString());
             }
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClearPeople_Click(object sender, EventArgs e)
+        {
+            data.people.Clear();
+            listBoxPersons.Items.Clear();
         }
     }
 }

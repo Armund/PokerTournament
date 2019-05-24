@@ -22,6 +22,18 @@ namespace PokerTournament
             people = new List<Person>();
         }
 
+        public bool isUnique (Person person)
+        {
+            bool check = true;
+
+            foreach (Person pers in people)
+            {
+                if (person.ID == pers.ID) return false;
+            }
+
+            return check;
+        }
+
         public void ReadDataFromJson()
         {
             // TODO: сделать нормальный путь к файлу
@@ -52,9 +64,11 @@ namespace PokerTournament
                         ID = Convert.ToInt32(excelworksheet.get_Range("A" + i).Value2);
                         name = Convert.ToString(excelworksheet.get_Range("D" + i).Value2) + " " + Convert.ToString(excelworksheet.get_Range("E" + i).Value2);
                         group = Convert.ToString(excelworksheet.get_Range("H" + i).Value2);
-                        people.Add(new Person(ID, name, group, Convert.ToString(excelworksheet.get_Range("H" + i).Value2) == "Да"));                           
+                        Person person = new Person(ID, name, group, Convert.ToString(excelworksheet.get_Range("G" + i).Value2) == "Да");
+                        if (isUnique(person)) people.Add(person);
                     }
                 } while (tournament != null);
+                excelapp.Workbooks.Close();
             }
         }
         public void SaveDataInJson()
