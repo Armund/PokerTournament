@@ -53,5 +53,20 @@ namespace PokerTournament
             data.people.Clear();
             listBoxPersons.Items.Clear();
         }
+
+        private void btnLanding_Click(object sender, EventArgs e)
+        {
+            listBoxPersons.Items.Clear();
+            data.landing = new Landing(data.people);
+            data.landing.makeLanding(data.people);
+            for (int i = 0; i < data.landing.tables.Count; i++)
+            {
+                listBoxPersons.Items.Add($"Table {i + 1}:");
+                for (int j = 0; j < data.landing.tables[i].Count; j++)
+                {
+                    listBoxPersons.Items.Add($"Place {j + 1}: {data.landing.tables[i][j].ToString()}");
+                }
+            }
+        }
     }
 }

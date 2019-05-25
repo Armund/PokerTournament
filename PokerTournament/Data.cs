@@ -13,6 +13,8 @@ namespace PokerTournament
     class Data
     {
         public List<Person> people;
+        public Landing landing; // TODO сделать динамическое изменение состава участников, автоматическое переформирование столов и сохранение рассадки в жсон, а ещё исправить удаление people после рассадки =)
+        
 
         public string pathPersonJson = "D:\\ALEX\\proging\\PokerTournament\\PokerTournament\\Person.json";
         public string pathPersonXLS = @"D:\ALEX\proging\PokerTournament\PokerTournament\Registratsia_na_mayskie_turniry_2019-05-23.xls";
@@ -22,7 +24,7 @@ namespace PokerTournament
             people = new List<Person>();
         }
 
-        public bool isUnique (Person person)
+        public bool isUnique (Person person) // TODO ПОПРОБОВАТЬ ЗАМЕНИТЬ isUnique НА EXISTS С ПРЕДИКАТОМ
         {
             bool check = true;
 
@@ -66,6 +68,7 @@ namespace PokerTournament
                         group = Convert.ToString(excelworksheet.get_Range("H" + i).Value2);
                         Person person = new Person(ID, name, group, Convert.ToString(excelworksheet.get_Range("G" + i).Value2) == "Да");
                         if (isUnique(person)) people.Add(person);
+                        // TODO ПОПРОБОВАТЬ ЗАМЕНИТЬ isUnique НА EXISTS С ПРЕДИКАТОМ
                     }
                 } while (tournament != null);
                 excelapp.Workbooks.Close();

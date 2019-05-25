@@ -34,6 +34,7 @@
             this.listBoxPersons = new System.Windows.Forms.ListBox();
             this.buttonListbox = new System.Windows.Forms.Button();
             this.btnClearPeople = new System.Windows.Forms.Button();
+            this.btnLanding = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxName
@@ -66,14 +67,14 @@
             // 
             this.listBoxPersons.AccessibleDescription = "";
             this.listBoxPersons.FormattingEnabled = true;
-            this.listBoxPersons.Location = new System.Drawing.Point(427, 50);
+            this.listBoxPersons.Location = new System.Drawing.Point(337, 34);
             this.listBoxPersons.Name = "listBoxPersons";
-            this.listBoxPersons.Size = new System.Drawing.Size(333, 381);
+            this.listBoxPersons.Size = new System.Drawing.Size(567, 693);
             this.listBoxPersons.TabIndex = 3;
             // 
             // buttonListbox
             // 
-            this.buttonListbox.Location = new System.Drawing.Point(766, 48);
+            this.buttonListbox.Location = new System.Drawing.Point(910, 49);
             this.buttonListbox.Name = "buttonListbox";
             this.buttonListbox.Size = new System.Drawing.Size(75, 23);
             this.buttonListbox.TabIndex = 4;
@@ -83,7 +84,7 @@
             // 
             // btnClearPeople
             // 
-            this.btnClearPeople.Location = new System.Drawing.Point(766, 77);
+            this.btnClearPeople.Location = new System.Drawing.Point(910, 78);
             this.btnClearPeople.Name = "btnClearPeople";
             this.btnClearPeople.Size = new System.Drawing.Size(75, 23);
             this.btnClearPeople.TabIndex = 5;
@@ -91,11 +92,22 @@
             this.btnClearPeople.UseVisualStyleBackColor = true;
             this.btnClearPeople.Click += new System.EventHandler(this.btnClearPeople_Click);
             // 
+            // btnLanding
+            // 
+            this.btnLanding.Location = new System.Drawing.Point(910, 107);
+            this.btnLanding.Name = "btnLanding";
+            this.btnLanding.Size = new System.Drawing.Size(75, 23);
+            this.btnLanding.TabIndex = 6;
+            this.btnLanding.Text = "Рассадить";
+            this.btnLanding.UseVisualStyleBackColor = true;
+            this.btnLanding.Click += new System.EventHandler(this.btnLanding_Click);
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1015, 655);
+            this.ClientSize = new System.Drawing.Size(1064, 732);
+            this.Controls.Add(this.btnLanding);
             this.Controls.Add(this.btnClearPeople);
             this.Controls.Add(this.buttonListbox);
             this.Controls.Add(this.listBoxPersons);
@@ -119,6 +131,7 @@
         private System.Windows.Forms.ListBox listBoxPersons;
         private System.Windows.Forms.Button buttonListbox;
         private System.Windows.Forms.Button btnClearPeople;
+        private System.Windows.Forms.Button btnLanding;
     }
 }
 

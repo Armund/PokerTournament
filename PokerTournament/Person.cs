@@ -13,6 +13,10 @@ namespace PokerTournament
         public string group { get; set; }
         public bool isStudent { get; set; }
 
+        public Person ()
+        {
+        }
+
         public Person(int id, string Name, string Group, bool IsStudent)
         {
             ID = id;
@@ -31,7 +35,7 @@ namespace PokerTournament
             {
                 student = "Нет";
             };
-            return $"ID: {ID}  Имя: {name}  Группа: {group} Студент: {student}";
+            return $"ID: {ID}\tИмя: {name}\tГруппа: {group}\tСтудент: {student}";
         }
 
     }
