@@ -51,6 +51,7 @@ namespace PokerTournament
         private void btnClearPeople_Click(object sender, EventArgs e)
         {
             data.people.Clear();
+            data.landing.tables.Clear();
             listBoxPersons.Items.Clear();
         }
 

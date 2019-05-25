@@ -13,7 +13,7 @@ namespace PokerTournament
     class Data
     {
         public List<Person> people;
-        public Landing landing; // TODO сделать динамическое изменение состава участников, автоматическое переформирование столов и сохранение рассадки в жсон, а ещё исправить удаление people после рассадки =)
+        public Landing landing; // TODO сделать динамическое изменение состава участников, автоматическое переформирование столов и сохранение рассадки в жсон =)
         
 
         public string pathPersonJson = "D:\\ALEX\\proging\\PokerTournament\\PokerTournament\\Person.json";
